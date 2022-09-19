@@ -344,7 +344,7 @@ function _maybeStartNext2() {
       var maxSocketsPerHost = (_item$options$maxSock = (_item$options = item.options) === null || _item$options === void 0 ? void 0 : _item$options.maxSocketsPerHost) !== null && _item$options$maxSock !== void 0 ? _item$options$maxSock : _classPrivateFieldGet(this, _options).maxSocketsPerHost; // Not important, but feature complete
 
       if (maxSocketsPerHost > 0) {
-        if (_classPrivateFieldGet(this, _activeHosts)[item.hostKey] === undefined) {
+        if (typeof _classPrivateFieldGet(this, _activeHosts)[item.hostKey] === 'undefined') {
           // Create key with first count
           _classPrivateFieldGet(this, _activeHosts)[item.hostKey] = 1;
           canStart = true;
@@ -382,7 +382,7 @@ function _removeItem2(_ref2) {
   var hostKey = _ref2.hostKey,
       id = _ref2.id;
 
-  if (typeof _classPrivateFieldGet(this, _activeHosts)[hostKey] !== 'undefined') {
+  if (_classPrivateFieldGet(this, _items)[id].active && typeof _classPrivateFieldGet(this, _activeHosts)[hostKey] !== 'undefined') {
     if (--_classPrivateFieldGet(this, _activeHosts)[hostKey] <= 0) {
       delete _classPrivateFieldGet(this, _activeHosts)[hostKey];
     }
