@@ -1,7 +1,7 @@
 {
   "name": "limited-request-queue",
   "description": "Interactively manage concurrency for outbound requests.",
-  "version": "5.2.0",
+  "version": "5.2.1",
   "license": "MIT",
   "author": "Steven Vachon <contact@svachon.com> (https://svachon.com)",
   "repository": "github:stevenvachon/limited-request-queue",
